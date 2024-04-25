@@ -67,8 +67,8 @@ const Card = () => {
           ))}
         </div>
         <div className="flex items-center justify-center md:justify-start gap-x-2 p-3">
-          <Button background="bg-[#BC43B1]">Follow</Button>
-          <Button background="bg-[#FFBD95]" icon={Lock}>
+          <Button className="bg-[#BC43B1] hover:bg-[#dd85d5]">Follow</Button>
+          <Button className="bg-[#FFBD95] hover:bg-[#ffd5bb]" icon={Lock}>
             Message
           </Button>
         </div>

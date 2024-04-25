@@ -4,12 +4,14 @@ import React from "react";
 interface ButtonProps {
   children: React.ReactNode;
   icon?: LucideIcon;
-  background: string;
+  className: string;
 }
 
-const Button = ({ children, icon: Icon, background }: ButtonProps) => {
+const Button = ({ children, icon: Icon, className }: ButtonProps) => {
   return (
-    <button className={`p-2 rounded-md flex items-center ${background}`}>
+    <button
+      className={`p-2 rounded-md flex items-center transition-all ${className}`}
+    >
       {Icon && <Icon size={20} className="mr-2" />}
       {children}
     </button>
