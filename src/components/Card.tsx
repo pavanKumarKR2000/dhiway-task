@@ -53,7 +53,7 @@ const Card = () => {
           Passionate frontend developer with expertise in HTML, CSS,JavaScript,
           and React.
         </p>
-        <div className="flex items-center ">
+        <div className="flex items-center justify-center md:justify-start">
           {data.map((item) => (
             <div
               className={`px-3 ${
