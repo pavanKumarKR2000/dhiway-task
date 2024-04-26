@@ -44,21 +44,19 @@ const Card = () => {
         </div>
       </div>
       {/** second column */}
-      <div className="md:col-span-2 space-y-2 text-center md:text-left">
+      <div className="md:col-span-2 space-y-2 text-center md:text-left px-3">
         <div className="px-3">
           <h1 className="text-2xl font-bold">Ashok Kumar</h1>
           <p className="text-slate-600">Frontend Developer</p>
         </div>
-        <p className="px-3">
+        <p>
           Passionate frontend developer with expertise in HTML, CSS,JavaScript,
           and React.
         </p>
         <div className="flex items-center justify-center md:justify-start">
           {data.map((item) => (
             <div
-              className={`px-3 ${
-                item.hasBorderRight && "border-r border-black"
-              }`}
+              className={`${item.hasBorderRight && "border-r border-black"}`}
               key={item.id}
             >
               <h2 className="text-slate-600">{item.value}</h2>
@@ -66,9 +64,11 @@ const Card = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center md:justify-start gap-x-2 p-3">
-          <Button className="bg-[#BC43B1] hover:bg-[#dd85d5]">Follow</Button>
-          <Button className="bg-[#FFBD95] hover:bg-[#ffd5bb]" icon={Lock}>
+        <div className="flex items-center justify-center md:justify-start gap-x-2">
+          <Button className="bg-[#BC43B1] text-white hover:text-black">
+            Follow
+          </Button>
+          <Button className="bg-[#FFBD95]" icon={Lock}>
             Message
           </Button>
         </div>
