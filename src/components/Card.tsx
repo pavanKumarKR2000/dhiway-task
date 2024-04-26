@@ -27,7 +27,7 @@ const data = [
 
 const Card = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-y-0 p-4 rounded-3xl shadow-md border-8 border-white w-[90%] md:w-[40%]">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-y-0 p-4 rounded-3xl shadow-md border-8 border-white w-[90%] sm:w-[60%] md:w-[50%] xl:w-[35%]">
       {/** first column */}
       <div className="flex flex-col items-center md:col-span-1 gap-y-6">
         <Image
@@ -44,19 +44,21 @@ const Card = () => {
         </div>
       </div>
       {/** second column */}
-      <div className="md:col-span-2 space-y-2 text-center md:text-left px-3">
+      <div className="md:col-span-2 space-y-2 text-center md:text-left">
         <div className="px-3">
           <h1 className="text-2xl font-bold">Ashok Kumar</h1>
           <p className="text-slate-600">Frontend Developer</p>
         </div>
-        <p>
+        <p className="px-3">
           Passionate frontend developer with expertise in HTML, CSS,JavaScript,
           and React.
         </p>
         <div className="flex items-center justify-center md:justify-start">
           {data.map((item) => (
             <div
-              className={`${item.hasBorderRight && "border-r border-black"}`}
+              className={`px-3 ${
+                item.hasBorderRight && "border-r border-black"
+              }`}
               key={item.id}
             >
               <h2 className="text-slate-600">{item.value}</h2>
@@ -64,11 +66,11 @@ const Card = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-center md:justify-start gap-x-2">
+        <div className="flex items-center justify-center md:justify-start gap-x-2 p-3">
           <Button className="bg-[#BC43B1] text-white hover:text-black">
             Follow
           </Button>
-          <Button className="bg-[#FFBD95]" icon={Lock}>
+          <Button className="bg-[#FFBD95] hover:bg-[#ffd5bb]" icon={Lock}>
             Message
           </Button>
         </div>
