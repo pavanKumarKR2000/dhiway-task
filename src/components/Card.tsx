@@ -70,7 +70,7 @@ const Card = () => {
           <Button className="bg-[#BC43B1] text-white hover:text-black">
             Follow
           </Button>
-          <Button className="bg-[#FFBD95] hover:bg-[#ffd5bb]" icon={Lock}>
+          <Button className="bg-[#FFBD95]" icon={Lock}>
             Message
           </Button>
         </div>
